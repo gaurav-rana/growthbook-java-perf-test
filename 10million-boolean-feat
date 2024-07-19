@@ -1,0 +1,63 @@
+--- Execution profile ---
+Total samples       : 2
+
+--- 10000000 ns (50.00%), 1 sample
+  [ 0] write$NOCANCEL
+  [ 1] _swrite
+  [ 2] __sflush
+  [ 3] __sfvwrite
+  [ 4] fwrite
+  [ 5] std::__1::ostreambuf_iterator<char, std::__1::char_traits<char>> std::__1::__pad_and_output[abi:v160006]<char, std::__1::char_traits<char>>
+  [ 6] std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:v160006]<char, std::__1::char_traits<char>>
+  [ 7] Profiler::runInternal
+  [ 8] Profiler::run
+  [ 9] VM::VMInit
+  [10] JvmtiExport::post_vm_initialized
+  [11] Threads::create_vm
+  [12] JNI_CreateJavaVM
+  [13] JavaMain
+  [14] ThreadJavaMain
+  [15] _pthread_start
+  [16] thread_start
+
+--- 10000000 ns (50.00%), 1 sample
+  [ 0] java.util.Properties.getProperty
+  [ 1] java.lang.System.getProperty
+  [ 2] java.nio.file.FileSystems$DefaultFileSystemHolder.getDefaultProvider
+  [ 3] java.nio.file.FileSystems$DefaultFileSystemHolder$1.run
+  [ 4] java.nio.file.FileSystems$DefaultFileSystemHolder$1.run
+  [ 5] java.security.AccessController.executePrivileged
+  [ 6] java.security.AccessController.doPrivileged
+  [ 7] java.nio.file.FileSystems$DefaultFileSystemHolder.defaultFileSystem
+  [ 8] java.nio.file.FileSystems$DefaultFileSystemHolder.<clinit>
+  [ 9] java.nio.file.FileSystems.getDefault
+  [10] java.nio.file.Path.of
+  [11] java.nio.file.Paths.get
+  [12] jdk.internal.jimage.ImageReaderFactory.<clinit>
+  [13] jdk.internal.module.SystemModuleFinders$SystemImage.<clinit>
+  [14] jdk.internal.module.SystemModuleFinders$SystemModuleReader.findImageLocation
+  [15] jdk.internal.module.SystemModuleFinders$SystemModuleReader.read
+  [16] jdk.internal.module.SystemModuleFinders$SystemModuleReader.open
+  [17] jdk.internal.loader.BuiltinClassLoader.findResourceAsStream
+  [18] jdk.internal.loader.BootLoader.findResourceAsStream
+  [19] java.lang.Module.getResourceAsStream
+  [20] java.util.ResourceBundle$ResourceBundleProviderHelper.lambda$loadPropertyResourceBundle$2
+  [21] java.util.ResourceBundle$ResourceBundleProviderHelper$$Lambda$4.0x000000b001042718.run
+  [22] java.security.AccessController.executePrivileged
+  [23] java.security.AccessController.doPrivileged
+  [24] java.util.ResourceBundle$ResourceBundleProviderHelper.loadPropertyResourceBundle
+  [25] java.util.ResourceBundle.loadBundle
+  [26] java.util.ResourceBundle.findBundle
+  [27] java.util.ResourceBundle.findBundle
+  [28] java.util.ResourceBundle.getBundleImpl
+  [29] java.util.ResourceBundle.getBundleImpl
+  [30] java.util.ResourceBundle.getBundleImpl
+  [31] java.util.ResourceBundle.getBundle
+  [32] sun.launcher.LauncherHelper$ResourceBundleHolder.<clinit>
+  [33] sun.launcher.LauncherHelper.getLocalizedMessage
+  [34] sun.launcher.LauncherHelper.initHelpMessage
+
+          ns  percent  samples  top
+  ----------  -------  -------  ---
+    10000000   50.00%        1  java.util.Properties.getProperty
+    10000000   50.00%        1  write$NOCANCEL
