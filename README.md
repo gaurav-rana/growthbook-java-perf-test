@@ -8,7 +8,7 @@ mvn clean install
 Run the project with the following command:
 ```bash
 export FEATURES_ENDPOINT="https://cdn.growthbook.io/....."
-java -agentpath:/path/to/asyncprofiler/lib/libasyncProfiler.dylib=start,event=cpu,file=profiler.html -jar target/growthbook-java-perf-test-1.0-SNAPSHOT.jar
+sh run.sh
 ```
 
-It'll create a file called `profiler.html` in the current directory. Open it in a browser to see the flamegraph.
+It'll create the reports in `reports/` directory. Open it in a browser to see the flamegraph.
