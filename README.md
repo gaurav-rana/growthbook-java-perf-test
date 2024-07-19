@@ -7,6 +7,4 @@ export FEATURES_ENDPOINT="https://cdn.growthbook.io/....."
 sh run.sh <mode>
 ```
 Where `<mode>` can be `cpu` or `alloc`.
-```
-
 It'll create the reports in `reports/` directory. Open it in a browser to see the flamegraph.
